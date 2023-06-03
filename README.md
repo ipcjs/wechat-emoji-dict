@@ -5,4 +5,10 @@
 - GBoard(全拼): [wechat-emoji-gboard-pinyin.zip](https://github.com/ipcjs/wechat-emoji-dict/releases/download/v1.0.0/wechat-emoji-gboard-pinyin.zip)
 - GBoard(小鹤双拼): [wechat-emoji-gboard-flypy.zip](https://github.com/ipcjs/wechat-emoji-dict/releases/download/v1.0.0/wechat-emoji-gboard-flypy.zip)
 
-![preview](resources/preview.png)
+### 预览
+
+![preview](resources/preview.jpg)
+
+### Emoji列表
+
+![all-emoji](resources/all-emoji.jpg)
