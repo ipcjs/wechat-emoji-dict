@@ -1,4 +1,4 @@
-from pypinyin import pinyin, lazy_pinyin, Style
+from pypinyin import lazy_pinyin, Style
 from zipfile import ZipFile
 import flypy
 import re
@@ -6,7 +6,7 @@ import re
 _RE_ENGLISH = re.compile(r'\w+', re.ASCII)
 
 
-def kanji_to_pinyin(kanji: str, py_type='pinyin'):
+def kanji_to_pinyin(kanji: str):
     if _RE_ENGLISH.fullmatch(kanji):
         # 纯英文字母, 转小写就行
         return ([kanji.lower()], True)
