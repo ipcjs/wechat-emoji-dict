@@ -49,6 +49,22 @@ sort: by_weight
                 f.write(item['word'] + '\t' + ' '.join(item['pinyin']) + '\n')
 
 
+def save_to_rime_opencc(array):
+    # TODO: kanji不能有重复...
+    with open('out/wechat-emoji-rime-opencc.txt', 'w', encoding='utf-8') as f:
+        for item in array:
+            if item['is_english']:
+                print(f'skip: {item}')
+            else:
+                f.write(
+                    item['kanji']
+                    + '\t' + item['kanji']
+                    + ' ' + item['word']
+                    + ' ![[' + item['word'].strip('[]') + '.png|20]]'
+                    + '\n'
+                )
+
+
 def main():
     array = []
     with open('source.txt', 'r', encoding='utf-8') as f:
@@ -62,12 +78,14 @@ def main():
                 pinyin, is_english = kanji_to_pinyin(kanji)
                 array.append({
                     'word': word,
+                    'kanji': kanji,
                     'pinyin': pinyin,
                     'is_english': is_english,
                 })
     save_to_rime(array)
     save_to_gboard(array)
     save_to_gboard(array, py_type='flypy')
+    save_to_rime_opencc(array)
 
 
 if __name__ == '__main__':
