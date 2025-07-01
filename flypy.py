@@ -1,5 +1,6 @@
-# copy from https://github.com/bcaso/pinyin_to_double_pinyin/blob/main/dp.py
-
+'''
+copy from https://github.com/bcaso/pinyin_to_double_pinyin/blob/main/dp.py
+'''
 first = {'ch': 'i',
          'sh': 'u',
          'zh': 'v'}
